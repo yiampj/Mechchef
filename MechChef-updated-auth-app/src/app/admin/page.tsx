@@ -1,7 +1,3 @@
-import { BadgeCheck, BarChart3, CircleDollarSign, Megaphone, Scale, Settings, ShieldCheck, UsersRound } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 
 const adminAreas: { title: string; text: string; icon: LucideIcon }[] = [
   { title: "Cook Verification", text: "Review applications, food hygiene evidence, kitchen checks, and active status.", icon: ShieldCheck },
