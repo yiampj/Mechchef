@@ -1496,7 +1496,7 @@ async function uploadProfilePhoto(input){
   if(file.size>2*1024*1024){showToast('File too large. Max 2MB');return;}
   document.getElementById('photo-upload-progress').style.display='block';
   const ext=file.name.split('.').pop();
-  const path='avatars/'+currentUser.id+'/photo.'+ext;
+  const path=currentUser.id+'/photo.'+ext;
   const{error:upErr}=await db.storage.from('avatars').upload(path,file,{upsert:true});
   if(upErr){document.getElementById('photo-upload-progress').style.display='none';showToast('Upload failed: '+upErr.message);return;}
   const{data:urlData}=db.storage.from('avatars').getPublicUrl(path);
